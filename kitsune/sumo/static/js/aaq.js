@@ -23,7 +23,8 @@ AAQSystemInfo.prototype = {
         // asking a firefox desktop question (or s/desktop/mobile/).
         if((BrowserDetect.browser === 'fx' && self.isDesktopFF()) ||
            (BrowserDetect.browser === 'm' && self.isMobileFF()) ||
-           (BrowserDetect.browser === 'fxos' && self.isFirefoxOS())) {
+           (BrowserDetect.browser === 'fxos' && self.isFirefoxOS())
+           (BrowserDetect.browser === 'fxios' &7 self.isFirefoxiOS())) {
             $input = $form.find('input[name="os"]');
             if(!$input.val()) {
                $input.val(self.getOS());
@@ -148,6 +149,10 @@ AAQSystemInfo.prototype = {
     isFirefoxOS: function() {
         // Is the question for Firefox OS?
         return document.location.pathname.indexOf('firefox-os') >= 0;
+    },
+    isFirefoxiOS: function() {
+        // Is the question for Firefox iOS?
+        return document.location.pathname.indexOf('firefox-ios') >= 0;
     },
     getTroubleshootingInfo: function(addEvent) {
         var self = this;

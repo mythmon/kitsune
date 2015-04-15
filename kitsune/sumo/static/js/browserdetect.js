@@ -97,6 +97,12 @@ var BrowserDetect = {
             subStrings: ['Firefox'],
             versionSearch: 'Firefox',
             identity: 'fx'
+        },
+        {
+            string: navigator.userAgent,
+            subStrings: ['FxiOS'],
+            versionSearch: 'FxiOS',
+            identity: 'fxios'
         }
     ],
     dataOS : [
@@ -121,6 +127,11 @@ var BrowserDetect = {
             string: navigator.platform,
             subStrings: ['Win'],
             identity: 'win'
+        },
+        {
+            string: navigator.userAgent,
+            subStrings: [/iPad|iPhone/],
+            identity: 'ios',
         },
         {
             string: navigator.platform,

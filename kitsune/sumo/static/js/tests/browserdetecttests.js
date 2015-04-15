@@ -88,4 +88,12 @@ test('Firefox OS', function() {
     deepEqual(BrowserDetect.detect(ua), ['fxos', 1.3, 'fxos']);
 });
 
+test('Firefox iOS', function() {
+    var ua;
+
+    ua = ('Mozilla/5.0 (iPhone; CPU iPhone OS 8_2 like Mac OS X) ' +
+          'AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12D508 Safari/600.1.4');
+    deepEqual(BrowserDetect.detect(ua), ['fxios', 1.0, 'ios']);
+});
+
 })();
