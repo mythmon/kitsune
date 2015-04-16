@@ -265,6 +265,62 @@ products = SortedDict([
             }),
         ])
     }),
+    ('ios', {
+        'name': _lazy(u'Firefox for iOS'),
+        'subtitle': _lazy(u'Firefox for iPhone, iPad and iPod touch devices'),
+        'extra_fields': ['ff_version', 'os', 'plugins'],
+        'tags': ['ios'],
+        'product': 'ios',
+        'categories': SortedDict([
+            # TODO: Just use the IA topics for this.
+            # See bug 979397
+            ('download-and-install', {
+                'name': _lazy(u'Download, install and migration'),
+                'topic': 'download-and-install',
+                'tags': ['download-and-install'],
+            }),
+            ('history-firefox-ios', {
+                'name': _lazy('History'),
+                'topic': 'history-firefox-ios',
+                'tags': ['history-firefox-ios'],
+            }),
+            ('basic-browsing-firefox-ios', {
+                'name': _lazy('Basic browsing'),
+                'topic': 'basic-browsing-firefox-ios',
+                'tags': ['basic-browsing-firefox-ios'],
+            }),
+            ('reader-view-and-list', {
+                'name': _lazy('Reader View and List'),
+                'topic': 'reader-view-and-list',
+                'tags': ['reader-view-and-list'],
+            }),
+            ('install-and-update-firefox-ios', {
+                'name': _lazy('Install and Update'),
+                'topic': 'install-and-update-firefox-ios',
+                'tags': ['install-and-update-firefox-ios'],
+            }),
+            ('bookmarks-and-tabs-firefox-ios', {
+                'name': _lazy('Bookmarks and tabs'),
+                'topic': 'bookmarks-and-tabs-firefox-ios',
+                'tags': ['bookmarks-and-tabs-firefox-ios'],
+            }),
+            ('privacy-settings-firefox-ios', {
+                'name': _lazy('Privacy'),
+                'topic': 'privacy-settings-firefox-ios',
+                'tags': ['privacy-settings-firefox-ios'],
+            }),
+            ('save-and-share-firefox-ios', {
+                'name': _lazy('Sharing'),
+                'topic': 'save-and-share-firefox-ios',
+                'tags': ['save-and-share-firefox-ios'],
+            }),
+            ('crashes-errors-and-other-issues', {
+                'name': _lazy('Crashes, errors and other issues'),
+                'topic': 'crashes-errors-and-other-issues',
+                'tags': ['crashes-errors-and-other-issues'],
+            }),
+        ])
+    }),
     ('other', {
         'name': _lazy(u'Other Mozilla products'),
         'subtitle': '',
